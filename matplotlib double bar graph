@@ -2,13 +2,13 @@ import matplotlib.pyplot as mp
 %matplotlib inline
 import pandas as pd
 
-year=["2018","2019","2020","2021"]
+year=["2018","2019","2020","2021","2022"]
 sales_a=[12,34,56,78,90]
 sales_b=[23,45,43,78,98]
-x_axis=np.arange(len(x))
-mp.bar(x_axis - 0.2,sales_a,0.4,label=" Company A ")
-mp.bar(x_axis - 0.2,sales_b,0.4,label=" Company B ")
-mp.xticks(x_axis,year)
-mp.legend()
-mp.show()
+x=np.arange(len(year))
+mp.bar(x- 0.2,sales_a,0.4,label=" Company A ")
+mp.bar(x+ 0.2,sales_b,0.4,label=" Company B ")
+mp.legend(title="bar graph")
+mp.xticks(x,year)
 
+mp.show()
